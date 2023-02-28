@@ -55,7 +55,7 @@ public class ShotBehaviorEditor : EditorWindow
             if (shotPrefab.GetComponent<Stick_Helper>() != null) { DestroyImmediate(shotPrefab.GetComponent<Stick_Helper>(), true); }
             //Check if we don't already have the component attatched. If it isn't we attatch it.
             if (shotPrefab.GetComponent<Destroy_Helper>() == null) { shotPrefab.AddComponent<Destroy_Helper>(); }
-            //Call our EditBounce() function
+            //Call our EditDestroy() function
             EditDestroy();
         }
         if(shotBehavior.sometype == ShotBehavior.SomeType.Stick)
@@ -65,24 +65,27 @@ public class ShotBehaviorEditor : EditorWindow
             if (shotPrefab.GetComponent<Destroy_Helper>() != null) { DestroyImmediate(shotPrefab.GetComponent<Destroy_Helper>(),true); }
             //Check if we don't already have the component attatched. If it isn't we attatch it.
             if (shotPrefab.GetComponent<Stick_Helper>() == null) { shotPrefab.AddComponent<Stick_Helper>(); }
-            //Call our EditBounce() function
+            //Call our EditStick() function
             EditStick();
         }
 
     }
-
+    #region These are the functions that show the different change values
     void EditBounce()
     {
-
+        GUILayout.Label("Bounce-Helper Value");
+        shotPrefab.GetComponent<Bounce_Helper>().someValue = EditorGUILayout.Slider(shotPrefab.GetComponent<Bounce_Helper>().someValue, 0.0f, 20.0f);
     }
 
     void EditDestroy()
     {
-
+        GUILayout.Label("Destroy-Helper Value");
+        shotPrefab.GetComponent<Destroy_Helper>().someInt = EditorGUILayout.IntField(shotPrefab.GetComponent<Destroy_Helper>().someInt);
     }
     void EditStick() 
     {
-    
+        GUILayout.Label("Stick-Helper Value");
+        shotPrefab.GetComponent<Stick_Helper>().SomeFloat = EditorGUILayout.DelayedFloatField(shotPrefab.GetComponent<Stick_Helper>().SomeFloat);
     }
-
+    #endregion
 }

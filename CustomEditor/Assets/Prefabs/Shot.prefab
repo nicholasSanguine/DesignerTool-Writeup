@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3308029705612189250}
   - component: {fileID: 530192077927152001}
   - component: {fileID: -797011562844706280}
-  - component: {fileID: -637225888821991244}
+  - component: {fileID: -3942573790851814101}
   m_Layer: 0
   m_Name: Shot
   m_TagString: Shot
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d47b7a482f2ca94690833738ec7c50c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sometype: 2
---- !u!114 &-637225888821991244
+  sometype: 1
+--- !u!114 &-3942573790851814101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,6 +136,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3308029705612189251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4ff52f53e5cb154493ac438f3bb7ee0, type: 3}
+  m_Script: {fileID: 11500000, guid: c88ef990297609c45976424d7a9f4e02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SomeFloat: 0
